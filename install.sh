@@ -9,15 +9,15 @@ COIN_CLI='/root/mon-ip-install/BTCmonster/bitcoinmonster-cli'
 COIN_DAEMON2='bitcoinmonsterd'
 COIN_CLI2='bitcoinmonster-cli'
 COIN_PATH='/usr/local/bin/'
-COIN_TGZ='https://github.com/DRIP-Project/DRIP/releases/download/v1.0.2.4/drip-1.0.2-x86_64-linux-gnu.tar.gz'
-COIN_ZIP='/root/drip-ip-install/drip-1.0.2-x86_64-linux-gnu.tar.gz'
-COIN_NAME='drip'
-COIN_NAME2='drip2'
-COIN_NAME3='drip3'
+COIN_TGZ='https://github.com/Bitcoin-Monster/BTCMonster/releases/download/1.1/btcmonster-linux.zip'
+COIN_ZIP='/root/mon-ip-install/btcmonster-linux.zip'
+COIN_NAME='mon'
+COIN_NAME2='mon2'
+COIN_NAME3='mon3'
 COIN_PORT=21461
-RPC_PORT=5551
-RPC_PORT2=5552
-RPC_PORT3=5553
+RPC_PORT=5680
+RPC_PORT2=5681
+RPC_PORT3=5682
 
 NODEIP=$(curl -s4 api.ipify.org)
 NODEIP2=$(curl -s4 api.ipify.org)
@@ -46,7 +46,7 @@ function download_node() {
   echo -e "Preparing to download ${GREEN}$COIN_NAME${NC}."
   wget -q $COIN_TGZ
   compile_error
-  tar xvzf $COIN_ZIP
+  unzip $COIN_ZIP
   chmod +x $COIN_DAEMON $COIN_CLI
   chown root: $COIN_DAEMON $COIN_CLI
   cp $COIN_DAEMON $COIN_PATH
