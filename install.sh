@@ -14,7 +14,7 @@ COIN_ZIP='/root/mon-ip-install/btcmonster-linux.zip'
 COIN_NAME='mon'
 COIN_NAME2='mon2'
 COIN_NAME3='mon3'
-COIN_PORT=21461
+#COIN_PORT=21461
 RPC_PORT=5680
 RPC_PORT2=5681
 RPC_PORT3=5682
@@ -395,7 +395,7 @@ function important_information() {
  echo -e "MASTERNODE PRIVATEKEY is: ${RED}$COINKEY${NC}"
  echo -e "Please check ${RED}$COIN_NAME${NC} daemon is running with the following command: ${RED}systemctl status $COIN_NAME.service${NC}"
  echo -e "Use ${RED}$COIN_CLI2 masternode status${NC} to check your MN.${NC}"
- echo -e "JOIN CHT SHARED MN SERVICE LOCATED HERE: ${GREEN}http://mns.cryptohashtank.net"${NC}"
+ echo -e "JOIN CHT SHARED MN SERVICE LOCATED HERE: ${GREEN}http://mns.cryptohashtank.net"${NC}
  if [[ -n $SENTINEL_REPO  ]]; then
   echo -e "${RED}Sentinel${NC} is installed in ${RED}$CONFIGFOLDER/sentinel${NC}"
   echo -e "Sentinel logs is: ${RED}$CONFIGFOLDER/sentinel.log${NC}"
